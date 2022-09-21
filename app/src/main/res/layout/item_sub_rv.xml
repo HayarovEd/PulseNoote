@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginTop="4dp">
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/time_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="xx:xx"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/high_pressure_tv"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/high_pressure_tv"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/high_pressure_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="32sp"
+        android:text="xxx"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@id/time_tv"
+        app:layout_constraintEnd_toStartOf="@id/tire_tv"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tire_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="32sp"
+        android:text="/"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@id/high_pressure_tv"
+        app:layout_constraintEnd_toStartOf="@id/low_pressure_tv"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/low_pressure_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="32sp"
+        android:text="xxx"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@id/tire_tv"
+        app:layout_constraintEnd_toStartOf="@id/heart_iv"/>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/heart_iv"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:background="@drawable/ic_heart"
+        app:layout_constraintTop_toTopOf="@id/high_pressure_tv"
+        app:layout_constraintStart_toEndOf="@id/low_pressure_tv"
+        app:layout_constraintBottom_toBottomOf="@id/high_pressure_tv"
+        app:layout_constraintEnd_toStartOf="@id/pulse_tv"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/pulse_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="32sp"
+        android:text="xx"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@id/heart_iv"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

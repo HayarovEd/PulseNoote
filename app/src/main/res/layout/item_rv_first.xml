@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/date_tv"
+        android:text="Дата"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:paddingStart="16dp"
+        android:layout_width="match_parent"
+        android:background="@color/md_theme_light_tertiaryContainer"
+        android:layout_height="wrap_content"/>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/sub_rv"
+        android:layout_width="match_parent"
+        android:layout_marginTop="4dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"/>
+
+</androidx.appcompat.widget.LinearLayoutCompat>
