@@ -22,8 +22,9 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         binding.fab.setOnClickListener { view ->
-            Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                .setAction("Action", null).show()
+            val dialog = DialogInputData()
+            val manager = supportFragmentManager
+            dialog.show(manager, "myDialog")
         }
     }
 
