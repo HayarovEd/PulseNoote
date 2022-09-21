@@ -1,25 +1,31 @@
 package com.edurda77.pulsenoote
 
-import android.app.Dialog
 import android.os.Bundle
-import androidx.appcompat.app.AlertDialog
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
 import androidx.fragment.app.DialogFragment
+import com.edurda77.pulsenoote.databinding.DialogViewBinding
 
 class DialogInputData: DialogFragment() {
-    override fun onCreateDialog(savedInstanceState: Bundle?): Dialog {
-        return activity?.let {
-            val builder = AlertDialog.Builder(it)
-            builder.setTitle("Введите данные")
-                .setView(R.layout.dialog_view)
-                .setNegativeButton("Отмена") {
-                        dialog, id ->  dialog.cancel()
-                }
-                .setPositiveButton("Ок") {
-                        dialog, id ->  dialog.dismiss()
-                }
+    private lateinit var binding: DialogViewBinding
+    override fun onCreateView(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View {
+        binding = DialogViewBinding.inflate(layoutInflater, container, false)
+        return binding.root
+    }
 
-            builder.create()
-        } ?: throw IllegalStateException("Activity cannot be null")
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        binding.okBt.setOnClickListener{
+            dismiss()
+        }
+        binding.cancelBt.setOnClickListener{
+            dismiss()
+        }
     }
 
 
