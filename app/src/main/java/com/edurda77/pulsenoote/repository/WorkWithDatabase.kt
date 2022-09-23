@@ -5,14 +5,14 @@ import com.edurda77.pulsenoote.entity.DataTransfer
 import com.edurda77.pulsenoote.entity.SubDataInput
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
+import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.ValueEventListener
-import com.google.firebase.database.ktx.database
 import com.google.firebase.database.ktx.getValue
-import com.google.firebase.ktx.Firebase
 import java.util.*
+import javax.inject.Inject
 
-class WorkWithDatabase {
-    private val database = Firebase.database.reference
+class WorkWithDatabase @Inject constructor (private val database : DatabaseReference) {
+    //private val database = Firebase.database.reference
     private val dataForShow = mutableListOf<DataInput>()
 
     fun writeToDb(hp: Int, lp: Int, ps: Int) {

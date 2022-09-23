@@ -1,19 +1,13 @@
-package com.edurda77.pulsenoote
+package com.edurda77.pulsenoote.ui
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.edurda77.pulsenoote.databinding.ActivityMainBinding
 import com.edurda77.pulsenoote.entity.DataInput
-import com.edurda77.pulsenoote.entity.DataTransfer
-import com.edurda77.pulsenoote.entity.SubDataInput
-import com.google.firebase.database.DataSnapshot
-import com.google.firebase.database.DatabaseError
-import com.google.firebase.database.ValueEventListener
-import com.google.firebase.database.ktx.database
-import com.google.firebase.database.ktx.getValue
-import com.google.firebase.ktx.Firebase
-import java.util.HashSet
+import com.edurda77.pulsenoote.ui.DialogInputData
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
