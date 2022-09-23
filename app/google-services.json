@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "628124279902",
+    "firebase_url": "https://pulsenoote-default-rtdb.firebaseio.com",
+    "project_id": "pulsenoote",
+    "storage_bucket": "pulsenoote.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:628124279902:android:b604264b816f2528c1c0cf",
+        "android_client_info": {
+          "package_name": "com.edurda77.pulsenoote"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "628124279902-2nrna0utnplmoklcfc16hqudulnpl4c3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB32q9aBk_yR29Hr4X_91wxkF4DzqBuXHM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "628124279902-2nrna0utnplmoklcfc16hqudulnpl4c3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

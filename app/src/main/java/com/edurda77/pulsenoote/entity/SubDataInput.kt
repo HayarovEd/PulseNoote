@@ -1,8 +1,9 @@
 package com.edurda77.pulsenoote.entity
 
-class SubDataInput {
-    val highPressure: Int? = null
-    val lowPressure: Int? = null
-    val pulse: Int? = null
-    val time: String? = null
-}
+data class SubDataInput (
+    val highPressure: Int?,
+    val lowPressure: Int?,
+    val pulse: Int?,
+    val time: String?
+)
+
