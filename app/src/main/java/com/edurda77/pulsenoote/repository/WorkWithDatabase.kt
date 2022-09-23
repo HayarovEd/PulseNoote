@@ -12,7 +12,6 @@ import java.util.*
 import javax.inject.Inject
 
 class WorkWithDatabase @Inject constructor (private val database : DatabaseReference) {
-    //private val database = Firebase.database.reference
     private val dataForShow = mutableListOf<DataInput>()
 
     fun writeToDb(hp: Int, lp: Int, ps: Int) {
@@ -50,8 +49,8 @@ class WorkWithDatabase @Inject constructor (private val database : DatabaseRefer
         }
         val setDate = HashSet(dateList)
         setDate.forEach { itSetDate ->
+            val tmpList = mutableListOf<SubDataInput>()
             list.forEach { itDate ->
-                val tmpList = mutableListOf<SubDataInput>()
                 if (itDate.currentData == itSetDate) {
                     tmpList.add(
                         SubDataInput(
@@ -62,8 +61,8 @@ class WorkWithDatabase @Inject constructor (private val database : DatabaseRefer
                         )
                     )
                 }
-                dataForShow.add(DataInput(itSetDate, tmpList))
             }
+            dataForShow.add(DataInput(itSetDate, tmpList))
 
         }
         return dataForShow

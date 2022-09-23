@@ -37,18 +37,6 @@ class DialogInputData: DialogFragment() {
             val pl = binding.pulseEv.text.toString().toInt()
             viewModel.addData(hp, lp, pl)
 
-            /*val database = Firebase.database.reference
-            val hp = binding.highPressureEv.text.toString().toInt()
-            val lp = binding.lowPressureEv.text.toString().toInt()
-            val pl = binding.pulseEv.text.toString().toInt()
-            if (hp<lp) {
-                Toast.makeText(requireContext(), "Верхнее не может быть меньше нижнего давления", Toast.LENGTH_LONG).show()
-            } else {
-                val newRecord = DataTransfer (hp, lp, pl)
-                database.child("record${Date()}").setValue(newRecord)
-            }*/
-
-
             dismiss()
         }
         binding.cancelBt.setOnClickListener{
