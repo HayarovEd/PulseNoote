@@ -17,7 +17,6 @@ class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
     private val viewModel by viewModels<MainActivityViewModel>()
-    val dataForShow = mutableListOf<DataInput>()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
@@ -29,7 +28,10 @@ class MainActivity : AppCompatActivity() {
             val manager = supportFragmentManager
             dialog.show(manager, "myDialog")
         }
-        viewModel.showData.observe(this) {
+        viewModel.dataForShow.observe(this) {
+            println("Размер ${it.size}")
+        }
+        /*viewModel.showData.observe(this) {
             when (it) {
                 is StateMainActivity.Loading -> {
 
@@ -39,7 +41,7 @@ class MainActivity : AppCompatActivity() {
                 }
                 is StateMainActivity.Success -> {
                     println("Размер ${it.data.size}")
-                    /*it.data.forEach {
+                    *//*it.data.forEach {
                         println(it.date)
 
                         it.records.forEach { subIt->
@@ -48,14 +50,14 @@ class MainActivity : AppCompatActivity() {
                             println(subIt.lowPressure)
                             println(subIt.pulse)
                         }
-                    }*/
+                    }*//*
 
                 }
                 is StateMainActivity.Empty -> {
 
                 }
             }
-        }
+        }*/
 
         //val database = Firebase.database.reference
 

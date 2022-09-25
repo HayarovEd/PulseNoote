@@ -1,10 +1,10 @@
 package com.edurda77.pulsenoote.utils
 
-import java.text.Format
+import android.annotation.SuppressLint
 import java.text.SimpleDateFormat
-import java.time.format.FormatStyle
 import java.util.*
 
+@SuppressLint("SimpleDateFormat")
 fun getCurrentTimeToString(): String {
     val formatter = SimpleDateFormat("hh:mm:ss a")
     return formatter.format(Date())
