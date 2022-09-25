@@ -7,7 +7,7 @@
 
     <androidx.appcompat.widget.AppCompatEditText
         android:id="@+id/high_pressure_ev"
-        android:hint="Высокое давление"
+        android:hint="Верхний показатель"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="4dp"
@@ -19,7 +19,7 @@
 
     <androidx.appcompat.widget.AppCompatEditText
         android:id="@+id/low_pressure_ev"
-        android:hint="Низкое давление"
+        android:hint="Нижний показатель"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="4dp"

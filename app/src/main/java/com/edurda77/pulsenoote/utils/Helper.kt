@@ -15,3 +15,5 @@ fun getCurrantDate () : String {
     val formatter = SimpleDateFormat("dd:MM:yyyy", local)
     return formatter.format(Date())
 }
+
+
