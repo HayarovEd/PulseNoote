@@ -46,13 +46,6 @@ class WorkWithDatabase @Inject constructor (private val database : DatabaseRefer
                 val listRecords: List<DataTransfer> = dataSnapshot.children.map {
                     it.getValue(DataTransfer::class.java)!!
                 }
-                /*val listRecords = mutableListOf<DataTransfer>()
-                dataSnapshot.children.forEach {
-                    val item = it.getValue<DataTransfer>()
-                    if (item != null) {
-                        listRecords.add(item)
-                    }
-                }*/
 
                 livaData.postValue(convertToShow(listRecords))
             }
